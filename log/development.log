@@ -1,0 +1,1367 @@
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateContacts (20201213093032)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "phone_number" varchar, "message" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201213093032"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-28 13:54:01.428288"], ["updated_at", "2021-02-28 13:54:01.428288"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-02-28 19:25:13 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 703.4ms | Allocations: 129791)
+  Rendered layout layouts/application.html.erb (Duration: 839.6ms | Allocations: 154834)
+Completed 200 OK in 931ms (Views: 851.6ms | ActiveRecord: 2.2ms | Allocations: 164686)
+
+
+Started GET "/" for ::1 at 2021-02-28 19:25:14 +0530
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 18.9ms | Allocations: 5256)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 12962)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.0ms | Allocations: 13831)
+
+
+Started GET "/en" for ::1 at 2021-02-28 19:25:17 +0530
+Processing by ContactsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2332)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 7831)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 8155)
+
+
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-02-28 20:38:09 +0530
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 184.8ms | Allocations: 16686)
+  Rendered layout layouts/application.html.erb (Duration: 235.5ms | Allocations: 23148)
+Completed 200 OK in 286ms (Views: 248.2ms | ActiveRecord: 0.7ms | Allocations: 31469)
+
+
+Started GET "/" for ::1 at 2021-02-28 20:38:10 +0530
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 25.4ms | Allocations: 2336)
+  Rendered layout layouts/application.html.erb (Duration: 55.5ms | Allocations: 7835)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.0ms | Allocations: 8162)
+
+
+Started GET "/en" for ::1 at 2021-02-28 20:38:12 +0530
+Processing by ContactsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2332)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 7830)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 8146)
+
+
+Started GET "/rails/mailers" for ::1 at 2021-02-28 20:38:20 +0530
+Processing by Rails::MailersController#index as HTML
+  Rendering layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 928)
+  Rendered layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb (Duration: 6.6ms | Allocations: 1171)
+Completed 200 OK in 107ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 13468)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission" for ::1 at 2021-02-28 20:38:23 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (1.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 16.1ms | Allocations: 5192)
+  Rendered layout layouts/mailer.html.erb (Duration: 16.9ms | Allocations: 5444)
+ContactMailer#contact_form_submission: processed outbound mail in 22.9ms
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.4ms | Allocations: 14363)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    10:     <tbody>
+    11:       <tr>
+    12:         <td>First Name</td>
+    13:         <td><%= @contact.first_name %></td>
+    14:       </tr>
+    15:       <tr>
+    16:         <td>Last Name</td>
+  
+app/views/contact_mailer/contact_form_submission.html.erb:13
+app/mailers/contact_mailer.rb:9:in `contact_form_submission'
+Started GET "/rails/mailers" for ::1 at 2021-02-28 20:38:26 +0530
+Processing by Rails::MailersController#index as HTML
+  Rendering layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 469)
+  Rendered layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb (Duration: 3.2ms | Allocations: 706)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 1639)
+
+
+Started GET "/rails/mailers/contact_mailer" for ::1 at 2021-02-28 20:38:27 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"contact_mailer"}
+  Rendering layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application (Duration: 3.9ms | Allocations: 356)
+  Rendered layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb (Duration: 4.5ms | Allocations: 439)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 1009)
+
+
+Started GET "/rails/mailers" for ::1 at 2021-02-28 20:38:33 +0530
+Processing by Rails::MailersController#index as HTML
+  Rendering layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 284)
+  Rendered layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb (Duration: 1.4ms | Allocations: 367)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 666)
+
+
+Started GET "/" for ::1 at 2021-02-28 20:38:38 +0530
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2882)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 8587)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 9642)
+
+
+Started POST "/en/contacts" for ::1 at 2021-02-28 20:39:03 +0530
+Processing by ContactsController#create as */*
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contact"=>{"first_name"=>"Neha", "last_name"=>"Tahalani", "email"=>"nehatahalani126@gmail.com", "phone_number"=>"8237436887", "message"=>"message"}, "locale"=>"en"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+  [1m[36mContact Create (2.1ms)[0m  [1m[32mINSERT INTO "contacts" ("first_name", "last_name", "email", "phone_number", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Neha"], ["last_name", "Tahalani"], ["email", "nehatahalani126@gmail.com"], ["phone_number", "8237436887"], ["message", "message"], ["created_at", "2021-02-28 15:09:03.468235"], ["updated_at", "2021-02-28 15:09:03.468235"]]
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 629c51f5-49ab-4eb5-9bef-50b20a6848ce) to Async(default) with arguments: "ContactMailer", "contact_form_submission", "deliver_now", {:args=>[#<GlobalID:0x00007fb7c1701fb8 @uri=#<URI::GID gid://rails-ajackus/Contact/1>>]}
+  Rendering contacts/show.json.jbuilder
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mContact Load (0.5ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [629c51f5-49ab-4eb5-9bef-50b20a6848ce] Performing ActionMailer::MailDeliveryJob (Job ID: 629c51f5-49ab-4eb5-9bef-50b20a6848ce) from Async(default) enqueued at 2021-02-28T15:09:03Z with arguments: "ContactMailer", "contact_form_submission", "deliver_now", {:args=>[#<GlobalID:0x00007fb7c546b0e8 @uri=#<URI::GID gid://rails-ajackus/Contact/1>>]}
+  Rendered contacts/_contact.json.jbuilder (Duration: 3.5ms | Allocations: 978)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [629c51f5-49ab-4eb5-9bef-50b20a6848ce]   Rendering layout layouts/mailer.html.erb
+  Rendered contacts/show.json.jbuilder (Duration: 17.6ms | Allocations: 5449)
+Completed 201 Created in 51ms (Views: 24.8ms | ActiveRecord: 6.1ms | Allocations: 10527)
+
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [629c51f5-49ab-4eb5-9bef-50b20a6848ce]   Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [629c51f5-49ab-4eb5-9bef-50b20a6848ce]   Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.4ms | Allocations: 28)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [629c51f5-49ab-4eb5-9bef-50b20a6848ce]   Rendered layout layouts/mailer.html.erb (Duration: 10.0ms | Allocations: 789)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [629c51f5-49ab-4eb5-9bef-50b20a6848ce] ContactMailer#contact_form_submission: processed outbound mail in 20.0ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [629c51f5-49ab-4eb5-9bef-50b20a6848ce] Delivered mail 603bb20f86ecb_13643fdbe230836c6787f@Admins-MacBook-Air.local.mail (38.9ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [629c51f5-49ab-4eb5-9bef-50b20a6848ce] Date: Sun, 28 Feb 2021 20:39:03 +0530
+From: noreply@example.com
+To: info@ajackus.com
+Message-ID: <603bb20f86ecb_13643fdbe230836c6787f@Admins-MacBook-Air.local.mail>
+Subject: Contact form submission
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      table {
+        width: 100%;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+      }
+      tr:nth-child(even) {
+        background-color: #eee;
+      }
+      tr:nth-child(odd) {
+        background-color: #fff;
+      }
+      th {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="width: 80%;text-align: center;margin: auto;">
+  <h1>New Contact form submission</h1>
+  <table style="width: 100%;">
+    <thead>
+      <tr>
+        <td>Field</td>
+        <td>Value</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>First Name</td>
+        <td>Neha</td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>Tahalani</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>nehatahalani126@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Phone Number</td>
+        <td>8237436887</td>
+      </tr>
+      <tr>
+        <td>Message</td>
+        <td>message</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [629c51f5-49ab-4eb5-9bef-50b20a6848ce] Performed ActionMailer::MailDeliveryJob (Job ID: 629c51f5-49ab-4eb5-9bef-50b20a6848ce) from Async(default) in 60.5ms
+Started GET "/en" for ::1 at 2021-02-28 20:39:11 +0530
+Processing by ContactsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2341)
+  Rendered layout layouts/application.html.erb (Duration: 51.8ms | Allocations: 7843)
+Completed 200 OK in 53ms (Views: 52.5ms | ActiveRecord: 0.0ms | Allocations: 8169)
+
+
+Started GET "/rails/mailers" for ::1 at 2021-02-28 20:39:18 +0530
+Processing by Rails::MailersController#index as HTML
+  Rendering layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 290)
+  Rendered layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb (Duration: 2.1ms | Allocations: 373)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 672)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission" for ::1 at 2021-02-28 20:39:20 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.5ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 47)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.9ms | Allocations: 137)
+ContactMailer#contact_form_submission: processed outbound mail in 4.9ms
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb (Duration: 3.9ms | Allocations: 1604)
+Completed 200 OK in 17ms (Views: 6.1ms | ActiveRecord: 0.5ms | Allocations: 6951)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission?part=text%2Fhtml" for ::1 at 2021-02-28 20:39:20 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.3ms | Allocations: 47)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.5ms | Allocations: 137)
+ContactMailer#contact_form_submission: processed outbound mail in 5.1ms
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 17ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 5335)
+
+
+Started GET "/" for ::1 at 2021-02-28 21:45:25 +0530
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 167.1ms | Allocations: 16056)
+  Rendered layout layouts/application.html.erb (Duration: 205.7ms | Allocations: 22518)
+Completed 200 OK in 274ms (Views: 218.0ms | ActiveRecord: 1.2ms | Allocations: 30764)
+
+
+Started GET "/" for ::1 at 2021-02-28 21:45:25 +0530
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2337)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 7836)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 8165)
+
+
+Started POST "/en/contacts" for ::1 at 2021-02-28 21:45:44 +0530
+Processing by ContactsController#create as */*
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contact"=>{"first_name"=>"Neha", "last_name"=>"Tahalani", "email"=>"nehatahalani126@gmail.com", "phone_number"=>"8237436887", "message"=>"Message"}, "locale"=>"en"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+  [1m[36mContact Create (2.6ms)[0m  [1m[32mINSERT INTO "contacts" ("first_name", "last_name", "email", "phone_number", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Neha"], ["last_name", "Tahalani"], ["email", "nehatahalani126@gmail.com"], ["phone_number", "8237436887"], ["message", "Message"], ["created_at", "2021-02-28 16:15:44.503934"], ["updated_at", "2021-02-28 16:15:44.503934"]]
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 556c8472-6602-47cf-9d6b-e87787ebe327) to Async(default) with arguments: "ContactMailer", "contact_form_submission", "deliver_now", {:args=>[#<GlobalID:0x00007fb67a174520 @uri=#<URI::GID gid://rails-ajackus/Contact/2>>]}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mContact Load (1.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [556c8472-6602-47cf-9d6b-e87787ebe327] Performing ActionMailer::MailDeliveryJob (Job ID: 556c8472-6602-47cf-9d6b-e87787ebe327) from Async(default) enqueued at 2021-02-28T16:15:44Z with arguments: "ContactMailer", "contact_form_submission", "deliver_now", {:args=>[#<GlobalID:0x00007fb67a1c48b8 @uri=#<URI::GID gid://rails-ajackus/Contact/2>>]}
+  Rendering contacts/show.json.jbuilder
+[ActiveJob] [ActionMailer::MailDeliveryJob] [556c8472-6602-47cf-9d6b-e87787ebe327]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [556c8472-6602-47cf-9d6b-e87787ebe327]   Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [556c8472-6602-47cf-9d6b-e87787ebe327]   Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 2.5ms | Allocations: 363)
+  Rendered contacts/_contact.json.jbuilder (Duration: 6.8ms | Allocations: 196)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [556c8472-6602-47cf-9d6b-e87787ebe327]   Rendered layout layouts/mailer.html.erb (Duration: 12.8ms | Allocations: 910)
+  Rendered contacts/show.json.jbuilder (Duration: 16.3ms | Allocations: 1604)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [556c8472-6602-47cf-9d6b-e87787ebe327] ContactMailer#contact_form_submission: processed outbound mail in 30.1ms
+Completed 201 Created in 175ms (Views: 55.6ms | ActiveRecord: 5.8ms | Allocations: 20479)
+
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [556c8472-6602-47cf-9d6b-e87787ebe327] Delivered mail 603bc1b0a7ad4_162e3fdb3d0bc838944dd@Admins-MacBook-Air.local.mail (75.7ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [556c8472-6602-47cf-9d6b-e87787ebe327] Date: Sun, 28 Feb 2021 21:45:44 +0530
+From: noreply@example.com
+To: info@ajackus.com
+Message-ID: <603bc1b0a7ad4_162e3fdb3d0bc838944dd@Admins-MacBook-Air.local.mail>
+Subject: Contact form submission
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      table {
+        width: 100%;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+      }
+      tr:nth-child(even) {
+        background-color: #eee;
+      }
+      tr:nth-child(odd) {
+        background-color: #fff;
+      }
+      th {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="width: 80%;text-align: center;margin: auto;">
+  <h1>New Contact form submission</h1>
+  <table style="width: 100%;">
+    <thead>
+      <tr>
+        <td>Field</td>
+        <td>Value</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>First Name</td>
+        <td>Neha</td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>Tahalani</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>nehatahalani126@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Phone Number</td>
+        <td>8237436887</td>
+      </tr>
+      <tr>
+        <td>Message</td>
+        <td>Message</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [556c8472-6602-47cf-9d6b-e87787ebe327] Performed ActionMailer::MailDeliveryJob (Job ID: 556c8472-6602-47cf-9d6b-e87787ebe327) from Async(default) in 115.5ms
+Started GET "/contact" for ::1 at 2021-02-28 21:47:23 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contact"):
+  
+Processing by ApplicationController#render404 as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/404.html within layouts/application
+  Rendered public/404.html within layouts/application (Duration: 4.3ms | Allocations: 34)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 5860)
+Completed 404 Not Found in 41ms (Views: 37.8ms | ActiveRecord: 0.0ms | Allocations: 6573)
+
+
+Started GET "/contacts" for ::1 at 2021-02-28 21:47:23 +0530
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2341)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 7842)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 8169)
+
+
+Started GET "/contacts/1" for ::1 at 2021-02-28 21:47:31 +0530
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (9.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:69:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 5.8ms | Allocations: 444)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 6142)
+Completed 200 OK in 77ms (Views: 18.1ms | ActiveRecord: 9.3ms | Allocations: 7281)
+
+
+Started GET "/en/contacts/1/edit" for ::1 at 2021-02-28 21:47:34 +0530
+Processing by ContactsController#edit as HTML
+  Parameters: {"locale"=>"en", "id"=>"1"}
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:69:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/edit.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 9.8ms | Allocations: 775)
+  Rendered contacts/edit.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1243)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 6939)
+Completed 200 OK in 48ms (Views: 35.0ms | ActiveRecord: 0.4ms | Allocations: 7968)
+
+
+Started PATCH "/en/contacts/1" for ::1 at 2021-02-28 21:47:35 +0530
+Processing by ContactsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Update Contact", "locale"=>"en", "id"=>"1"}
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:69:in `set_contact'
+Redirected to http://localhost:3000/en/contacts/1
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms | Allocations: 1220)
+
+
+Started GET "/en/contacts/1" for ::1 at 2021-02-28 21:47:35 +0530
+Processing by ContactsController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"1"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:69:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 290)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 5986)
+Completed 200 OK in 17ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 6878)
+
+
+Started GET "/en/contacts" for ::1 at 2021-02-28 21:47:37 +0530
+Processing by ContactsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2332)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 7830)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 8146)
+
+
+Started GET "/hi" for ::1 at 2021-02-28 21:47:42 +0530
+Processing by ContactsController#index as HTML
+  Parameters: {"locale"=>"hi"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2361)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 7860)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 8672)
+
+
+Started GET "/en" for ::1 at 2021-02-28 21:47:46 +0530
+Processing by ContactsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 2332)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 7830)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms | Allocations: 8146)
+
+
+Started GET "/en/contacts/1" for ::1 at 2021-02-28 21:49:08 +0530
+Processing by ContactsController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"1"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:69:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 277)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 5973)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.2ms | Allocations: 6864)
+
+
+Started GET "/en/contacts/1/edit" for ::1 at 2021-02-28 21:49:22 +0530
+Processing by ContactsController#edit as HTML
+  Parameters: {"locale"=>"en", "id"=>"1"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:69:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/edit.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 1.9ms | Allocations: 478)
+  Rendered contacts/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 683)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 6378)
+Completed 200 OK in 29ms (Views: 21.2ms | ActiveRecord: 0.3ms | Allocations: 7276)
+
+
+Started GET "/en/contacts/1/edit" for ::1 at 2021-02-28 21:49:31 +0530
+Processing by ContactsController#edit as HTML
+  Parameters: {"locale"=>"en", "id"=>"1"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:69:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/edit.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 3.7ms | Allocations: 478)
+  Rendered contacts/edit.html.erb within layouts/application (Duration: 5.1ms | Allocations: 683)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 6380)
+Completed 200 OK in 26ms (Views: 21.0ms | ActiveRecord: 0.3ms | Allocations: 7286)
+
+
+Started GET "/en" for ::1 at 2021-02-28 21:50:01 +0530
+Processing by ContactsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2332)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 7830)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 8146)
+
+
+Started POST "/en/contacts" for ::1 at 2021-02-28 21:52:26 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContactsController#create as */*
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contact"=>{"first_name"=>"Neha", "last_name"=>"Tahalani", "email"=>"nehatahalani126@gmail.com", "phone_number"=>"8237436887", "message"=>"mmm"}, "locale"=>"en"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+  [1m[36mContact Create (0.8ms)[0m  [1m[32mINSERT INTO "contacts" ("first_name", "last_name", "email", "phone_number", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Neha"], ["last_name", "Tahalani"], ["email", "nehatahalani126@gmail.com"], ["phone_number", "8237436887"], ["message", "mmm"], ["created_at", "2021-02-28 16:22:26.894183"], ["updated_at", "2021-02-28 16:22:26.894183"]]
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 41c2d4a4-3209-42ed-904e-d958b8c2a7da) to Async(default) with arguments: "ContactMailer", "contact_form_submission", "deliver_now", {:args=>[#<GlobalID:0x00007f86d2b56728 @uri=#<URI::GID gid://rails-ajackus/Contact/3>>]}
+  Rendering contacts/show.json.jbuilder
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [41c2d4a4-3209-42ed-904e-d958b8c2a7da] Performing ActionMailer::MailDeliveryJob (Job ID: 41c2d4a4-3209-42ed-904e-d958b8c2a7da) from Async(default) enqueued at 2021-02-28T16:22:26Z with arguments: "ContactMailer", "contact_form_submission", "deliver_now", {:args=>[#<GlobalID:0x00007f86cec254a0 @uri=#<URI::GID gid://rails-ajackus/Contact/3>>]}
+  Rendered contacts/_contact.json.jbuilder (Duration: 3.2ms | Allocations: 745)
+  Rendered contacts/show.json.jbuilder (Duration: 32.1ms | Allocations: 6336)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [41c2d4a4-3209-42ed-904e-d958b8c2a7da]   Rendering layout layouts/mailer.html.erb
+Completed 201 Created in 138ms (Views: 57.5ms | ActiveRecord: 4.8ms | Allocations: 28658)
+
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [41c2d4a4-3209-42ed-904e-d958b8c2a7da]   Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [41c2d4a4-3209-42ed-904e-d958b8c2a7da]   Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 4.9ms | Allocations: 727)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [41c2d4a4-3209-42ed-904e-d958b8c2a7da]   Rendered layout layouts/mailer.html.erb (Duration: 12.5ms | Allocations: 1985)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [41c2d4a4-3209-42ed-904e-d958b8c2a7da] ContactMailer#contact_form_submission: processed outbound mail in 35.4ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [41c2d4a4-3209-42ed-904e-d958b8c2a7da] Delivered mail 603bc343d071_16903fc3675cd3d8203ee@Admins-MacBook-Air.local.mail (18.5ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [41c2d4a4-3209-42ed-904e-d958b8c2a7da] Date: Sun, 28 Feb 2021 21:52:27 +0530
+From: noreply@example.com
+To: nehatahalani126@gmail.com
+Message-ID: <603bc343d071_16903fc3675cd3d8203ee@Admins-MacBook-Air.local.mail>
+Subject: Contact form submission
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      table {
+        width: 100%;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+      }
+      tr:nth-child(even) {
+        background-color: #eee;
+      }
+      tr:nth-child(odd) {
+        background-color: #fff;
+      }
+      th {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="width: 80%;text-align: center;margin: auto;">
+  <h1>New Contact form submission</h1>
+  <table style="width: 100%;">
+    <thead>
+      <tr>
+        <td>Field</td>
+        <td>Value</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>First Name</td>
+        <td>Neha</td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>Tahalani</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>nehatahalani126@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Phone Number</td>
+        <td>8237436887</td>
+      </tr>
+      <tr>
+        <td>Message</td>
+        <td>mmm</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [41c2d4a4-3209-42ed-904e-d958b8c2a7da] Performed ActionMailer::MailDeliveryJob (Job ID: 41c2d4a4-3209-42ed-904e-d958b8c2a7da) from Async(default) in 85.36ms
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  [1m[36mContact Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "contacts" LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+Started GET "/" for ::1 at 2021-03-01 19:33:32 +0530
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 161.4ms | Allocations: 16030)
+  Rendered layout layouts/application.html.erb (Duration: 222.0ms | Allocations: 22492)
+Completed 200 OK in 287ms (Views: 232.3ms | ActiveRecord: 1.7ms | Allocations: 30737)
+
+
+Started GET "/" for ::1 at 2021-03-01 19:33:32 +0530
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 43.5ms | Allocations: 2336)
+  Rendered layout layouts/application.html.erb (Duration: 112.2ms | Allocations: 7835)
+Completed 200 OK in 115ms (Views: 113.8ms | ActiveRecord: 0.0ms | Allocations: 8162)
+
+
+Started GET "/hi" for ::1 at 2021-03-01 19:33:38 +0530
+Processing by ContactsController#index as HTML
+  Parameters: {"locale"=>"hi"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2361)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 7860)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 8673)
+
+
+Started POST "/hi/contacts" for ::1 at 2021-03-01 19:33:53 +0530
+Processing by ContactsController#create as */*
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contact"=>{"first_name"=>"Neha", "last_name"=>"Tahalani", "email"=>"nehatahalani126@gmail.com", "phone_number"=>"8237436887", "message"=>"m"}, "locale"=>"hi"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+  [1m[36mContact Create (6.6ms)[0m  [1m[32mINSERT INTO "contacts" ("first_name", "last_name", "email", "phone_number", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Neha"], ["last_name", "Tahalani"], ["email", "nehatahalani126@gmail.com"], ["phone_number", "8237436887"], ["message", "m"], ["created_at", "2021-03-01 14:03:53.249733"], ["updated_at", "2021-03-01 14:03:53.249733"]]
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 78fad700-cd0f-4d52-8194-242c9b2f041c) to Async(default) with arguments: "ContactMailer", "contact_form_submission", "deliver_now", {:args=>[#<GlobalID:0x00007f9bc7a3a240 @uri=#<URI::GID gid://rails-ajackus/Contact/4>>]}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [78fad700-cd0f-4d52-8194-242c9b2f041c] Performing ActionMailer::MailDeliveryJob (Job ID: 78fad700-cd0f-4d52-8194-242c9b2f041c) from Async(default) enqueued at 2021-03-01T14:03:53Z with arguments: "ContactMailer", "contact_form_submission", "deliver_now", {:args=>[#<GlobalID:0x00007f9bc4570af0 @uri=#<URI::GID gid://rails-ajackus/Contact/4>>]}
+  Rendering contacts/show.json.jbuilder
+[ActiveJob] [ActionMailer::MailDeliveryJob] [78fad700-cd0f-4d52-8194-242c9b2f041c]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [78fad700-cd0f-4d52-8194-242c9b2f041c]   Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [78fad700-cd0f-4d52-8194-242c9b2f041c]   Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 3.9ms | Allocations: 277)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [78fad700-cd0f-4d52-8194-242c9b2f041c]   Rendered layout layouts/mailer.html.erb (Duration: 6.2ms | Allocations: 512)
+  Rendered contacts/_contact.json.jbuilder (Duration: 3.2ms | Allocations: 429)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [78fad700-cd0f-4d52-8194-242c9b2f041c] ContactMailer#contact_form_submission: processed outbound mail in 14.3ms
+  Rendered contacts/show.json.jbuilder (Duration: 14.4ms | Allocations: 2030)
+Completed 201 Created in 149ms (Views: 66.3ms | ActiveRecord: 9.5ms | Allocations: 24487)
+
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [78fad700-cd0f-4d52-8194-242c9b2f041c] Delivered mail 603cf4495cb77_2f2a3fcde410682c1779@Admins-MacBook-Air.local.mail (46.6ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [78fad700-cd0f-4d52-8194-242c9b2f041c] Date: Mon, 01 Mar 2021 19:33:53 +0530
+From: noreply@example.com
+To: info@ajackus.com
+Message-ID: <603cf4495cb77_2f2a3fcde410682c1779@Admins-MacBook-Air.local.mail>
+Subject: Contact form submission
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      table {
+        width: 100%;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+      }
+      tr:nth-child(even) {
+        background-color: #eee;
+      }
+      tr:nth-child(odd) {
+        background-color: #fff;
+      }
+      th {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="width: 80%;text-align: center;margin: auto;">
+  <h1>New Contact form submission</h1>
+  <table style="width: 100%;">
+    <thead>
+      <tr>
+        <td>Field</td>
+        <td>Value</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>First Name</td>
+        <td>Neha</td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>Tahalani</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>nehatahalani126@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Phone Number</td>
+        <td>8237436887</td>
+      </tr>
+      <tr>
+        <td>Message</td>
+        <td>m</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [78fad700-cd0f-4d52-8194-242c9b2f041c] Performed ActionMailer::MailDeliveryJob (Job ID: 78fad700-cd0f-4d52-8194-242c9b2f041c) from Async(default) in 65.19ms
+Started GET "/contact" for ::1 at 2021-03-01 19:34:08 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contact"):
+  
+Processing by ApplicationController#render404 as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/404.html within layouts/application
+  Rendered public/404.html within layouts/application (Duration: 1.7ms | Allocations: 34)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 5857)
+Completed 404 Not Found in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 6464)
+
+
+Started GET "/contacts" for ::1 at 2021-03-01 19:34:13 +0530
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2339)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 7840)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 8167)
+
+
+Started GET "/contacts/1" for ::1 at 2021-03-01 19:34:16 +0530
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:69:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 441)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 6139)
+Completed 200 OK in 19ms (Views: 13.3ms | ActiveRecord: 0.4ms | Allocations: 7282)
+
+
+Started GET "/contacts/4" for ::1 at 2021-03-01 19:34:20 +0530
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mContact Load (0.5ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:69:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 277)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5973)
+Completed 200 OK in 24ms (Views: 18.1ms | ActiveRecord: 0.5ms | Allocations: 6874)
+
+
+Started GET "/en/contacts/4/edit" for ::1 at 2021-03-01 19:34:22 +0530
+Processing by ContactsController#edit as HTML
+  Parameters: {"locale"=>"en", "id"=>"4"}
+  [1m[36mContact Load (0.5ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:69:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/edit.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (Duration: 4.1ms | Allocations: 775)
+  Rendered contacts/edit.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1243)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 6941)
+Completed 200 OK in 46ms (Views: 41.6ms | ActiveRecord: 0.5ms | Allocations: 7978)
+
+
+Started GET "/en/contacts/4" for ::1 at 2021-03-01 19:34:24 +0530
+Processing by ContactsController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"4"}
+  [1m[36mContact Load (2.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/contacts_controller.rb:69:in `set_contact'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 279)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 5975)
+Completed 200 OK in 28ms (Views: 19.3ms | ActiveRecord: 2.4ms | Allocations: 6874)
+
+
+Started GET "/en/contacts" for ::1 at 2021-03-01 19:34:31 +0530
+Processing by ContactsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2333)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 7832)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 8156)
+
+
+Started GET "/rails/mailers" for ::1 at 2021-03-01 19:35:08 +0530
+Processing by Rails::MailersController#index as HTML
+  Rendering layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 927)
+  Rendered layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb (Duration: 12.0ms | Allocations: 1169)
+Completed 200 OK in 20ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 2550)
+
+
+Started GET "/rails/mailers" for ::1 at 2021-03-01 19:35:09 +0530
+Processing by Rails::MailersController#index as HTML
+  Rendering layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 685)
+  Rendered layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb (Duration: 6.0ms | Allocations: 947)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 3772)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission" for ::1 at 2021-03-01 19:35:10 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (1.0ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 2.0ms | Allocations: 219)
+  Rendered layout layouts/mailer.html.erb (Duration: 4.2ms | Allocations: 433)
+ContactMailer#contact_form_submission: processed outbound mail in 8.8ms
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb (Duration: 5.7ms | Allocations: 1601)
+Completed 200 OK in 25ms (Views: 8.1ms | ActiveRecord: 1.0ms | Allocations: 7793)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission?part=text%2Fhtml" for ::1 at 2021-03-01 19:35:11 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.3ms | Allocations: 47)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.8ms | Allocations: 137)
+ContactMailer#contact_form_submission: processed outbound mail in 3.9ms
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 15ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 5215)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission?part=text%2Fhtml&locale=hi" for ::1 at 2021-03-01 19:35:15 +0530
+Started GET "/rails/mailers/contact_mailer/contact_form_submission.html?locale=hi" for ::1 at 2021-03-01 19:35:15 +0530
+Processing by Rails::MailersController#preview as HTML
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"locale"=>"hi", "path"=>"contact_mailer/contact_form_submission"}
+  Parameters: {"part"=>"text/html", "locale"=>"hi", "path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 47)
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 47)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.2ms | Allocations: 281)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.2ms | Allocations: 275)
+ContactMailer#contact_form_submission: processed outbound mail in 7.9ms
+ContactMailer#contact_form_submission: processed outbound mail in 5.8ms
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb
+Completed 200 OK in 16ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 10490)
+
+
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb (Duration: 0.8ms | Allocations: 602)
+Completed 200 OK in 19ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 11665)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission.html?locale=hi&part=text%2Fhtml" for ::1 at 2021-03-01 19:35:15 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"locale"=>"hi", "part"=>"text/html", "path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 47)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.6ms | Allocations: 137)
+ContactMailer#contact_form_submission: processed outbound mail in 2.9ms
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 5130)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission.html?locale=hi&part=text%2Fhtml&locale=en" for ::1 at 2021-03-01 19:35:19 +0530
+Processing by Rails::MailersController#preview as HTML
+Started GET "/rails/mailers/contact_mailer/contact_form_submission.html?locale=en" for ::1 at 2021-03-01 19:35:19 +0530
+  Parameters: {"locale"=>"en", "part"=>"text/html", "path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+Processing by Rails::MailersController#preview as HTML
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Parameters: {"locale"=>"en", "path"=>"contact_mailer/contact_form_submission"}
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 47)
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layout layouts/mailer.html.erb (Duration: 1.8ms | Allocations: 516)
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+ContactMailer#contact_form_submission: processed outbound mail in 5.3ms
+  Rendering layout layouts/mailer.html.erb
+  Rendering text template
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 47)
+Completed 200 OK in 15ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 10067)
+
+
+  Rendered layout layouts/mailer.html.erb (Duration: 1.2ms | Allocations: 272)
+ContactMailer#contact_form_submission: processed outbound mail in 4.2ms
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb (Duration: 1.0ms | Allocations: 602)
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 6534)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission.html?locale=en&part=text%2Fhtml" for ::1 at 2021-03-01 19:35:19 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"locale"=>"en", "part"=>"text/html", "path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 47)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.1ms | Allocations: 137)
+ContactMailer#contact_form_submission: processed outbound mail in 4.3ms
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 12ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 5130)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission.html?locale=en&part=text%2Fhtml&locale=hi" for ::1 at 2021-03-01 19:35:44 +0530
+Processing by Rails::MailersController#preview as HTML
+Started GET "/rails/mailers/contact_mailer/contact_form_submission.html?locale=hi" for ::1 at 2021-03-01 19:35:44 +0530
+  Parameters: {"locale"=>"hi", "part"=>"text/html", "path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 47)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.5ms | Allocations: 137)
+ContactMailer#contact_form_submission: processed outbound mail in 2.7ms
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 5506)
+
+
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"locale"=>"hi", "path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 47)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.6ms | Allocations: 137)
+ContactMailer#contact_form_submission: processed outbound mail in 8.9ms
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb (Duration: 0.9ms | Allocations: 602)
+Completed 200 OK in 16ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 5716)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission.html?locale=hi&part=text%2Fhtml" for ::1 at 2021-03-01 19:35:44 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"locale"=>"hi", "part"=>"text/html", "path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 47)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.0ms | Allocations: 137)
+ContactMailer#contact_form_submission: processed outbound mail in 15.3ms
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 24ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 5130)
+
+
+Started GET "/" for ::1 at 2021-03-01 19:54:24 +0530
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 903.9ms | Allocations: 112716)
+  Rendered layout layouts/application.html.erb (Duration: 1037.4ms | Allocations: 137439)
+Completed 200 OK in 1108ms (Views: 1049.1ms | ActiveRecord: 1.3ms | Allocations: 147292)
+
+
+Started GET "/" for ::1 at 2021-03-01 19:54:26 +0530
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2348)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 7979)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms | Allocations: 8306)
+
+
+Started POST "/en/contacts" for ::1 at 2021-03-01 19:54:42 +0530
+Processing by ContactsController#create as */*
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contact"=>{"first_name"=>"n", "last_name"=>"n", "email"=>"n", "phone_number"=>"1", "message"=>"m"}, "locale"=>"en"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+  [1m[36mContact Create (2.8ms)[0m  [1m[32mINSERT INTO "contacts" ("first_name", "last_name", "email", "phone_number", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "n"], ["last_name", "n"], ["email", "n"], ["phone_number", "1"], ["message", "m"], ["created_at", "2021-03-01 14:24:42.477634"], ["updated_at", "2021-03-01 14:24:42.477634"]]
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/contacts_controller.rb:30:in `block in create'
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: b473a36e-8443-4ca2-980b-808030ff9a5c) to Async(default) with arguments: "ContactMailer", "contact_form_submission", "deliver_now", {:args=>[#<GlobalID:0x00007f8087f39ee0 @uri=#<URI::GID gid://rails-ajackus/Contact/5>>]}
+  Rendering contacts/show.json.jbuilder
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendered contacts/_contact.json.jbuilder (Duration: 3.6ms | Allocations: 769)
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered contacts/show.json.jbuilder (Duration: 19.6ms | Allocations: 3482)
+Completed 201 Created in 141ms (Views: 27.6ms | ActiveRecord: 5.8ms | Allocations: 22504)
+
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b473a36e-8443-4ca2-980b-808030ff9a5c] Performing ActionMailer::MailDeliveryJob (Job ID: b473a36e-8443-4ca2-980b-808030ff9a5c) from Async(default) enqueued at 2021-03-01T14:24:42Z with arguments: "ContactMailer", "contact_form_submission", "deliver_now", {:args=>[#<GlobalID:0x00007f8087f80cf0 @uri=#<URI::GID gid://rails-ajackus/Contact/5>>]}
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b473a36e-8443-4ca2-980b-808030ff9a5c]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b473a36e-8443-4ca2-980b-808030ff9a5c]   Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b473a36e-8443-4ca2-980b-808030ff9a5c]   Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 2.5ms | Allocations: 410)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b473a36e-8443-4ca2-980b-808030ff9a5c]   Rendered layout layouts/mailer.html.erb (Duration: 8.0ms | Allocations: 661)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b473a36e-8443-4ca2-980b-808030ff9a5c] ContactMailer#contact_form_submission: processed outbound mail in 19.9ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b473a36e-8443-4ca2-980b-808030ff9a5c] Delivered mail 603cf92aa0b39_2fba3fc043f986502569b@Admins-MacBook-Air.local.mail (86.6ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b473a36e-8443-4ca2-980b-808030ff9a5c] Date: Mon, 01 Mar 2021 19:54:42 +0530
+From: noreply@example.com
+To: info@ajackus.com
+Message-ID: <603cf92aa0b39_2fba3fc043f986502569b@Admins-MacBook-Air.local.mail>
+Subject: Contact form submission
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      table {
+        width: 100%;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+      }
+      tr:nth-child(even) {
+        background-color: #eee;
+      }
+      tr:nth-child(odd) {
+        background-color: #fff;
+      }
+      th {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="width: 80%;text-align: center;margin: auto;">
+  <h1>New Contact form submission</h1>
+  <table style="width: 100%;">
+    <thead>
+      <tr>
+        <td>Field</td>
+        <td>Value</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>First Name</td>
+        <td>n</td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>n</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>n</td>
+      </tr>
+      <tr>
+        <td>Phone Number</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Message</td>
+        <td>m</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [b473a36e-8443-4ca2-980b-808030ff9a5c] Performed ActionMailer::MailDeliveryJob (Job ID: b473a36e-8443-4ca2-980b-808030ff9a5c) from Async(default) in 110.44ms
+Started GET "/contacts" for ::1 at 2021-03-01 19:54:56 +0530
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2341)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 7842)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.0ms | Allocations: 8169)
+
+
+Started GET "/hi" for ::1 at 2021-03-01 19:54:57 +0530
+Processing by ContactsController#index as HTML
+  Parameters: {"locale"=>"hi"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2361)
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 7861)
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 0.0ms | Allocations: 8674)
+
+
+Started GET "/en" for ::1 at 2021-03-01 19:55:04 +0530
+Processing by ContactsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2332)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 7830)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 8146)
+
+
+Started GET "/hi" for ::1 at 2021-03-01 19:55:05 +0530
+Processing by ContactsController#index as HTML
+  Parameters: {"locale"=>"hi"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2344)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 7843)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 8161)
+
+
+Started GET "/en" for ::1 at 2021-03-01 19:55:17 +0530
+Processing by ContactsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2333)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 7832)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 8156)
+
+
+Started GET "/mailers" for ::1 at 2021-03-01 19:55:30 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/mailers"):
+  
+Processing by ApplicationController#render404 as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/404.html within layouts/application
+  Rendered public/404.html within layouts/application (Duration: 2.4ms | Allocations: 34)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5859)
+Completed 404 Not Found in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 6570)
+
+
+Started GET "/rails/mailers" for ::1 at 2021-03-01 19:55:42 +0530
+Processing by Rails::MailersController#index as HTML
+  Rendering layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 926)
+  Rendered layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb (Duration: 5.6ms | Allocations: 1168)
+Completed 200 OK in 17ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 2605)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission" for ::1 at 2021-03-01 19:55:44 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 1.0ms | Allocations: 414)
+  Rendered layout layouts/mailer.html.erb (Duration: 3.4ms | Allocations: 949)
+ContactMailer#contact_form_submission: processed outbound mail in 15.0ms
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb (Duration: 6.9ms | Allocations: 1601)
+Completed 200 OK in 31ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 9774)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission?part=text%2Fhtml" for ::1 at 2021-03-01 19:55:44 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.5ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.4ms | Allocations: 47)
+  Rendered layout layouts/mailer.html.erb (Duration: 1.1ms | Allocations: 137)
+ContactMailer#contact_form_submission: processed outbound mail in 8.0ms
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 24ms (Views: 4.8ms | ActiveRecord: 0.5ms | Allocations: 5332)
+
+
+Started GET "/rails/mailers" for ::1 at 2021-03-01 19:55:57 +0530
+Processing by Rails::MailersController#index as HTML
+  Rendering layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 469)
+  Rendered layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb (Duration: 5.7ms | Allocations: 706)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 1436)
+
+
+Started GET "/rails/mailers/contact_mailer" for ::1 at 2021-03-01 19:55:59 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"contact_mailer"}
+  Rendering layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application (Duration: 2.3ms | Allocations: 356)
+  Rendered layout /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/layouts/application.html.erb (Duration: 2.7ms | Allocations: 439)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 1010)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission" for ::1 at 2021-03-01 19:56:03 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 47)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.5ms | Allocations: 137)
+ContactMailer#contact_form_submission: processed outbound mail in 3.3ms
+  Rendering /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /Users/mypersonal/.rvm/gems/ruby-2.6.5/gems/railties-6.1.0/lib/rails/templates/rails/mailers/email.html.erb (Duration: 0.9ms | Allocations: 598)
+Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 5698)
+
+
+Started GET "/rails/mailers/contact_mailer/contact_form_submission?part=text%2Fhtml" for ::1 at 2021-03-01 19:56:03 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"contact_mailer/contact_form_submission"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/contact_mailer_preview.rb:6:in `contact_form_submission'
+  Rendering layout layouts/mailer.html.erb
+  Rendering contact_mailer/contact_form_submission.html.erb within layouts/mailer
+  Rendered contact_mailer/contact_form_submission.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 47)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.4ms | Allocations: 137)
+ContactMailer#contact_form_submission: processed outbound mail in 2.7ms
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 25)
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 5134)
+
+
+Started GET "/" for ::1 at 2021-03-01 19:59:14 +0530
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  Rendered contacts/index.html.erb within layouts/application (Duration: 73.1ms | Allocations: 16959)
+  Rendered layout layouts/application.html.erb (Duration: 1175.8ms | Allocations: 114907)
+Completed 200 OK in 1184ms (Views: 1181.9ms | ActiveRecord: 0.0ms | Allocations: 115957)
+
+

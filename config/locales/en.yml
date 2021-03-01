@@ -1,0 +1,30 @@
+en:
+  activerecord:
+    attributes:
+      contact:
+        first_name: First Name
+        last_name: Last Name
+        email: Email
+        phone_number: Phone Number
+        message: Message
+  global:
+    eg: Eg.
+  contacts:
+    index:
+      page_title: Send Us A Message
+      name: Tell us your name
+      email: Enter your email
+      phone_number: Enter Phone Number
+      message: Message
+      submit: Send Message
+      address: Address
+      full_address: Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
+      lets_talk: Lets Talk
+      contact_number: +1 800 1236879
+      support: General Support
+      message_placeholder: Write us a message
+      field_warnings:
+        first_name: Type first name
+        last_name: Type last name
+        email: "Valid email is required: ex@abc.xyz"
+        message: Message is required
